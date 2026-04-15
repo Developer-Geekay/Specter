@@ -5,7 +5,10 @@
   "description": "Browser extension for MCP with WebLLM",
   "permissions": [
     "sidePanel",
-    "storage"
+    "storage",
+    "debugger",
+    "tabs",
+    "activeTab"
   ],
   "background": {
     "service_worker": "src/background.ts",
