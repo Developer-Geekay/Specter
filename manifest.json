@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Local AI Debugger",
+  "version": "1.0.0",
+  "description": "Browser extension for MCP with WebLLM",
+  "permissions": [
+    "sidePanel",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open Local AI Debugger"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
